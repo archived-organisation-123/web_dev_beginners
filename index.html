@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginners Intro to Web Development</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>A Beginners Intro to Web Development</h2>
+					<div>
+						<img class="plain" src="images/codeupleeds.png" alt="code up logo"/>
+					</div>
+				</section>
+
+				<section id="objectives" data-background="#dddddd">
+                    <h2>Objectives</h2>
+					<p>By the end of this workshop you should be able to:</p>
+					<ul class="fragment fade-out">
+						<li>Name some different HTML Elements and Attributes</li>
+						<li>Create and view a simple webpage</li>
+						<li>Add some simple styling improvements to a webpage</li>
+						<li>Love Web Development!</li>
+					</ul>
+                    <div class="fragment" 
+                        style="position:absolute; top: 180px; margin-left:calc(50% - 240px);">
+                        <iframe src="https://giphy.com/embed/cFdHXXm5GhJsc"
+                            width="480"
+                            height="377"
+                            frameBorder="0"
+                            class="giphy-embed" allowFullScreen>
+                        </iframe>
+                    </div>
+				</section>
+
+				<section id="HTML">
+					<h2>HTML: HyperText Markdown Language</h2>
+					<ul>
+						<li>Language that web browsers use to render pages</li>
+						<li>First released in 1993</li>
+						<li>Designed to create web documents. Has since been extended for web <em>applications</em></li>
+					</ul>
+				</section>
+
+				<section id="html-tags">
+					<h2>HTML TAGS</h2>
+                    <p>Used to define an element</p>
+                    <div>
+                        <pre><code class="hljs html">&lt;element&gt;</code></pre>
+                    </div>
+                    <div class="fragment">
+                        <pre><code class="hljs html">&lt;element&gt;&lt;/element&gt;</code></pre>
+                    </div>
+
+				</section>
+
+				<section id="html-tags-continued">
+					<h2>SOME IMPORTANT HTML TAGS</h2>
+                    <div>
+                        <pre><code class="hljs html">&lt;h1&gt;Header Tag&lt;/h1&gt;</code></pre>
+                    </div>
+                    <div>
+                        <pre><code class="hljs html">&lt;p&gt;Paragraph Tag&lt;/p&gt;</code></pre>
+                    </div>
+                    <div>
+                        <pre><code class="hljs html">&lt;img&gt; Image Tag</code></pre>
+                    </div>
+
+                    <div>
+                        <pre><code class="hljs html">&lt;div&gt;Divider Tag&lt;/div&gt;</code></pre>
+                    </div>
+
+                    <div>
+                        <pre><code class="hljs html">&lt;a&gt;Anchor Tag&lt;/a&gt;</code></pre>
+                    </div>
+
+                    <br>
+                    <div>
+                        <h4>Reference:</h4>
+                        <a href="https://developer.mozilla.org/docs/Web/HTML/Element">
+                            https://developer.mozilla.org/docs/Web/HTML/Element
+                        </a>
+                    </div>
+				</section>
+
+				<section id="attributes">
+					<h2>Attributes</h2>
+                    <p>Used to specify characteristics of an element</p>
+                    <div>
+                        <pre><code class="hljs html">&lt;tag attribute&gt;&lt;/tag&gt;</code></pre>
+                    </div>
+
+                    <div class="fragment">
+                        <pre><code class="hljs html">&lt;tag attribute="value"&gt;&lt;/tag&gt;</code></pre>
+                    </div>
+
+				</section>
+
+                <section id="attributes-continued">
+                    <h2>Some important attributes</h2>
+
+                    <div>
+                        <pre><code class="hljs html">&lt;div id="my-div"&gt;&lt;/div&gt;</code></pre>
+                    </div>
+
+                    <div>
+                        <pre><code class="hljs html">&lt;div class="demo-div"&gt;&lt;/div&gt;</code></pre>
+                    </div>
+
+                    <div>
+                        <pre><code class="hljs html">&lt;img src="/address/of/image.jpg"&gt;</code></pre>
+                    </div>
+
+                </section>
+
+				<section id="codepen"
+                    data-background-image="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif"
+                >
+					<h2>Lets try it out!</h2>
+					<div>
+						<h3>
+							<a href="https://codepen.io">codepen.io</a>
+						</h3>
+					</div>
+				</section>
+
+				<section id="css"
+                    data-background-image="https://media.giphy.com/media/yYSSBtDgbbRzq/giphy.gif"
+                    data-background-repeat="no-repeat"
+                    data-background-size="contain"
+                >
+
+				</section>
+
+				<section id="css-rules">
+                    <section>
+                        <h2>CSS rules</h2>
+                        <div>
+                            <pre><code class="hljs css" data-trim>
+                                    element {
+                                        rule: value;
+                                    }
+                            </code></pre>
+                        </div>
+
+                        <div>
+                            <pre><code class="hljs css" data-trim>
+                                    .class {
+                                        rule: value;
+                                    }
+                            </code></pre>
+                        </div>
+
+                        <div>
+                            <pre><code class="hljs css" data-trim>
+                                    #id {
+                                        rule: value;
+                                    }
+                            </code></pre>
+                        </div>
+
+                    </section>
+
+                    <section id="css-rules-example">
+                        <div>
+                            <pre><code class="hljs css" data-trim>
+                                    div {
+                                        color: blue;
+                                    }
+                            </code></pre>
+                        </div>
+
+                        <div>
+                            <pre><code class="hljs css" data-trim>
+                                    .info-box {
+                                        background-color: yellow;
+                                        color: purple;
+                                    }
+                            </code></pre>
+                        </div>
+                        <div>
+                            <pre><code class="hljs css" data-trim>
+                                    #container {
+                                        border: 1px solid black;
+                                    }
+                            </code></pre>
+
+                        </div>
+
+                        <div>
+                            <h4>Reference:</h4>
+                            <a href="https://developer.mozilla.org/docs/Web/CSS">
+                                https://developer.mozilla.org/docs/Web/CSS
+                            </a>
+                        </div>
+                        <hr>
+                        <div>
+                            <a href="https://codepen.io/">Try it out</a>
+                        </div>
+
+                    </section>
+				</section>
+
+                <section id="box-model">
+
+                    <h2>Box Model</h2>
+                    <div>
+                        <img src="/images/box_model.png">
+                    </div>
+                </section>
+
+
+                <section id="further-reading">
+                    <h2>Further Steps</h2>
+                    <ul>
+                        <li>
+                            <a href="https://developer.mozilla.org/docs/Web">
+                                developer.mozilla.org/docs/Web
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

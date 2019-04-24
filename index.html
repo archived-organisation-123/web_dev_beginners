@@ -298,6 +298,302 @@
                     </ul>
                 </section>
 
+                <section>
+                    <h2>Intro to JS</h2>
+                </section>
+
+                <section>
+                    <h2>JS is everywhere</h2>
+                    <ul>
+                        <li>Websites</li>
+                        <li>Mobile Apps</li>
+                        <li>Servers</li>
+                        <li><a href="https://www.youtube.com/watch?v=d1upI3mwfNY">Check this out</a></li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Learn JS</h2>
+                    <p>Lets make Tic Tac Toe</p>
+                </section>
+
+                <section>
+                    <h2>Draw the board</h2>
+                    <p>Html needed</p>
+                    <pre><code class="hljs html">
+            &lt;html&gt;
+            &lt;body&gt;
+                &lt;div class=&quot;board&quot;&gt;
+                    &lt;div class=&quot;board-piece&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;board-piece&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;board-piece&quot;&gt;&lt;/div&gt;
+                    &lt;!-- 3 times --&gt;
+                &lt;/div&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+                    </code></pre>
+                </section>
+
+                <section>
+                        <h2>Draw the board</h2>
+                        <p>Board class</p>
+                    <pre><code class="hljs css">
+                    .board { 
+                        margin: auto;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        width: 300px;
+                        height: 300px;
+                    }
+                    </code></pre>
+                </section>
+
+                <section>
+                        <h2>Draw the board</h2>
+                        <p>Board piece class</p>
+                    <pre><code class="hljs css">
+                    .board-piece { 
+                        box-sizing: border-box;
+                        border: 1px solid black;
+                        width: 100px;
+                        height: 100px;
+                        
+                        background-repeat: no-repeat;
+                        background-size: 90% 90%;
+                        background-position: center; 
+                    }
+                    </code></pre>
+                </section>
+
+                <section>
+                        <h2>Draw the board</h2>
+                        <p>Cross & Circle</p>
+                    <pre><code class="hljs css">
+    .circle {
+        background-image: url("https://bit.ly/2UB4bmj");
+    } 
+    .cross { 
+        background-image: url("https://bit.ly/2KZJX5Z");
+    }
+                    </code></pre>
+                </section>
+
+                <section>
+                        <h2>Excercise 1</h2>
+                        <p>Modify HTML to display a cricle and a cross by adding appropriate classes to board-piece elements</p>
+                </section>
+
+                <section>
+                    <h2>Lets write some JS</h2>
+                    <p><a href="https://codepen.io/d-baranowski/pen/zXmrMv">Code Pen</a></p>
+                </section>
+
+                <section>
+                    <h2>Variables in JS</h2>
+                    <ul>
+                        <li>Means of storing information in computer memory</li>
+                        <li>Think of them as labeled boxes for your data</li>
+                        <li>Use the <b>var</b> keyword</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Example Variables</h2>
+                    <pre><code class="hljs javascript">
+    var myName = "Daniel"
+    var someNumber = 4
+    var pi = 3.14
+    var joinString = myName + " Baranowski"
+    var anotherNumber = 4 + 8 * 15 - 10
+    var codeUpIsFun = true
+    var codeUpIsExpensive = false
+    var listOfNames = ["Pedro", "Bianca", "Ben", "Sophie"]
+                    </code></pre>
+                    <p>Try them using console.log(your variable) to print the value of your variable</p>
+                </section>
+
+                <section>
+                        <h2>Exercise 2 - turn order</h2>
+                        <p>Create a variable called turn which contains a value 'circle' indicating that circles go first</p>
+                </section>
+
+                <section>
+                        <h2>Exercise 2 - Solution</h2>
+                        <pre><code class="hljs javascript">
+    var turn = "circle"
+                        </code></pre>
+                </section>
+
+                <section>
+                        <h2>Interacting with webpage elements</h2>
+                        <pre><code class="hljs javascript">
+    var boards = document.getElementsByClassName("board")
+    console.log(boards.length)
+    var board = boards.item(0) // Gets the first items 
+    board.classList.add("cross"); // Add a css class
+    board.classList.add("circle");
+    board.classList.remove("cross"); // Remove a css class
+                        </code></pre>
+                </section>
+
+                <section>
+                        <h2>Exercise 3 - Gather the pieces</h2>
+                        <p>Create a variable called 'boardPieces' which contains references to all div elements with a board-piece class</p>
+                </section>
+
+                <section>
+                        <h2>Exercise 3 - Solution</h2>
+                        <pre><code class="hljs javascript">
+    var boardPieces = 
+        document.getElementsByClassName("board-piece")
+                        </code></pre>
+                </section>
+
+                <section>
+                        <h2>Functions - Reusable code</h2>
+                        <pre><code class="hljs javascript">
+    var myNumber = 2; 
+    var anotherNumber = 5;
+    function addTwoNumbers(x, y) {
+        // Private variable inside the function
+        var z = x + y; 
+        console.log(x + " plus " + y " is " + z);
+        return z;
+    };
+    
+    addTwoNumbers(myNumber, anotherNumber)
+                        </code></pre>
+                </section>
+
+                <section>
+                        <h2>Functions - Event handlers</h2>
+                        <pre><code class="hljs javascript">
+    var reds = document.getElementByClassName("red-btn")
+    var red = reds.item(0)
+    var blues = document.getElementByClassName("blue-btn")
+    var blue = blues.item(0)
+
+    // event is populated with information about the click
+    function shout(event) {
+        var clickedButton = event.target; 
+
+        alert(clickedButton.classList.toString())
+    }
+
+    red.onclick = shout;
+    blue.onclick = shout;
+                        </code></pre>
+                </section>
+
+                <section>
+                        <h2>Loops - Print numbers</h2>
+                        <pre><code class="hljs javascript">
+    for (var i = 0; i < 100; i = i + 1) {
+        console.log("Value of i is " + i);
+    }
+                        </code></pre>
+                </section>
+
+                <section>
+                        <h2>Loops - Iterate over lists</h2>
+                        <pre><code class="hljs javascript">
+    var pianoKeys = document.getElementByClassName("piano-key")
+
+    for (var i = 0; i < pianoKeys.length; i = i + 1) {
+        pianoKeys.item(i).onclick = play
+    }
+                        </code></pre>
+                </section>
+
+                <section>
+                        <h2>Exercise 4 - On board element click</h2>
+                        <p>Create a function onBoardPieceClick that prints 'ouch' to console. Assign that function to all elements with 'board-piece' class</p>
+                </section>
+
+                <section>
+                        <h2>Exercise 4 - Solution</h2>
+                        <pre><code class="hljs javascript">
+    function onBoardPieceClick(event) {
+        console.log("ouch")
+    }
+        
+    for (var i = 0; i < boardPieces.length; i = i + 1) {
+        boardPieces.item(i).onclick = onBoardPieceClick;
+    }
+                        </code></pre>
+                </section>
+
+                <section>
+                        <h2>Exercise 5 - On board element click</h2>
+                        <p>Modify function onBoardPieceClick to add a class to clicked board piece (available in event.target). The class name should be equal to value of variable turn created in Excercise 1.</p>
+                </section>
+
+                <section>
+                        <h2>Exercise 5 - Solution</h2>
+                        <pre><code class="hljs javascript">
+    function onBoardPieceClick(event) {
+        var boardPiece = event.target
+        boardPiece.classList.add(turn)
+    }
+        
+    for (var i = 0; i < boardPieces.length; i = i + 1) {
+        boardPieces.item(i).onclick = onBoardPieceClick;
+    }
+                        </code></pre>
+                </section>
+
+                <section>
+                        <h2>If Statements - Make decistions</h2>
+                        <p>Notice the <b>==</b> sign. Its called equality operator</p>
+                        <pre><code class="hljs javascript">
+    var animal = "dog"
+    if (animal == "cat") {
+        console.log("meow")
+    }
+
+    if (animal == "dog") {
+        console.log("woof")
+    }
+                        </code></pre>
+                </section>
+
+                <section>
+                        <h2>If Statements - Modify variables</h2>
+                        <pre><code class="hljs javascript">
+    var light = "red"
+    if (light == "red") {
+        light = "red and amber"
+    }
+
+    if (light == "red and amber") {
+        light = "green"
+    }
+    // ...
+                        </code></pre>
+                </section>
+
+                <section>
+                        <h2>Exercise 6 - Alternate turns</h2>
+                        <p>Extend function onBoardPieceClick to change the value of turn variable. If it's 'circle' it should become 'cross'. If it's 'cross' it should become 'circle'</p>
+                </section>
+
+                <section>
+                        <h2>Exercise 6 - Alternate turns</h2>
+                        <pre><code class="hljs javascript">
+    function onBoardPieceClick(event) {
+        var boardPiece = event.target
+        boardPiece.classList.add(turn)
+        if (turn == "circle") {
+            turn = "cross"
+        } 
+        if (turn == "square") {
+            turn = "circle"
+        }
+    }
+                        </code></pre>
+                </section>
+
                 <section id="further-reading">
                     <h2>Helpful resources</h2>
                     <ul>

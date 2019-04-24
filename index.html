@@ -315,15 +315,44 @@
                 
 
                 <section>
-                        <h2>Excercise 1</h2>
+                        <h2>Exercise 1</h2>
                         <p>Modify HTML to display a cricle and a cross by adding appropriate classes to board-piece elements</p>
                 </section>
 
-                <section>
-                    <h2>Lets write some JS</h2>
-                    <p><a href="https://codepen.io/d-baranowski/pen/zXmrMv">Code Pen</a></p>
+                <section id="next-steps">
+                    <h2>Advanced Topics</h2>
+                    <ul>
+                        <li>More CSS</li>
+                        <li>JavaScript</li>
+                        <li>Custom Domain</li>
+                    </ul>
                 </section>
 
+                <section>
+                    <h2>Intro to JS</h2>
+                    <ul>
+                        <li>First appeared	December 4, 1995; 2pwd3 years ago</li>
+                        <li>Named JavaScript to appeal to busineses and Java developers</li>
+                        <li>Familiar syntax to java, but very different language</li>
+                        <li>Fastest growing open source community</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Module Counts</h2>
+                    <img src="/images/js-rules.png"/>
+                </section>
+
+                <section>
+                    <h2>JS is everywhere</h2>
+                    <ul>
+                        <li>Websites</li>
+                        <li>Mobile Apps</li>
+                        <li>Servers</li>
+                        <li><a href="https://www.youtube.com/watch?v=d1upI3mwfNY">Check this out</a></li>
+                    </ul>
+                </section>
+                
                 <section>
                     <h2>Variables in JS</h2>
                     <ul>
@@ -339,11 +368,9 @@
     var myName = "Daniel"
     var someNumber = 4
     var pi = 3.14
-    var joinString = myName + " Baranowski"
     var anotherNumber = 4 + 8 * 15 - 10
     var codeUpIsFun = true
     var codeUpIsExpensive = false
-    var listOfNames = ["Pedro", "Bianca", "Ben", "Sophie"]
                     </code></pre>
                     <p>Try them using console.log(your variable) to print the value of your variable</p>
                 </section>
@@ -366,9 +393,9 @@
     var boards = document.getElementsByClassName("board")
     console.log(boards.length)
     var board = boards.item(0) // Gets the first items 
-    board.classList.add("cross"); // Add a css class
-    board.classList.add("circle");
-    board.classList.remove("cross"); // Remove a css class
+    board.classList.add("cross") // Add a css class
+    board.classList.add("circle")
+    board.classList.remove("cross") // Remove a css class
                         </code></pre>
                 </section>
 
@@ -388,14 +415,13 @@
                 <section>
                         <h2>Functions - Reusable code</h2>
                         <pre><code class="hljs javascript">
-    var myNumber = 2; 
-    var anotherNumber = 5;
+    var myNumber = 2
+    var anotherNumber = 5
     function addTwoNumbers(x, y) {
         // Private variable inside the function
-        var z = x + y; 
-        console.log(x + " plus " + y " is " + z);
-        return z;
-    };
+        var z = x + y 
+        console.log(z)
+    }
     
     addTwoNumbers(myNumber, anotherNumber)
                         </code></pre>
@@ -411,13 +437,13 @@
 
     // event is populated with information about the click
     function shout(event) {
-        var clickedButton = event.target; 
+        var clickedButton = event.target
 
         alert(clickedButton.classList.toString())
     }
 
-    red.onclick = shout;
-    blue.onclick = shout;
+    red.onclick = shout
+    blue.onclick = shout
                         </code></pre>
                 </section>
 
@@ -425,7 +451,7 @@
                         <h2>Loops - Print numbers</h2>
                         <pre><code class="hljs javascript">
     for (var i = 0; i < 100; i = i + 1) {
-        console.log("Value of i is " + i);
+        console.log("Value of i is " + i)
     }
                         </code></pre>
                 </section>
@@ -454,14 +480,14 @@
     }
         
     for (var i = 0; i < boardPieces.length; i = i + 1) {
-        boardPieces.item(i).onclick = onBoardPieceClick;
+        boardPieces.item(i).onclick = onBoardPieceClick
     }
                         </code></pre>
                 </section>
 
                 <section>
                         <h2>Exercise 5 - On board element click</h2>
-                        <p>Modify function onBoardPieceClick to add a class to clicked board piece (available in event.target). The class name should be equal to value of variable turn created in Excercise 1.</p>
+                        <p>Modify function onBoardPieceClick to add a class to clicked board piece (available in event.target). The class name should be equal to value of variable turn created in Exercise 1.</p>
                 </section>
 
                 <section>
@@ -473,7 +499,7 @@
     }
         
     for (var i = 0; i < boardPieces.length; i = i + 1) {
-        boardPieces.item(i).onclick = onBoardPieceClick;
+        boardPieces.item(i).onclick = onBoardPieceClick
     }
                         </code></pre>
                 </section>

@@ -276,7 +276,7 @@
 
                 <section>
                     <h2>Module Counts</h2>
-                    <img src="/images/js-rules.png"/>
+                    <img src="./images/js-rules.png"/>
                 </section>
 
                 <section>
@@ -312,12 +312,12 @@
                 </section>
 
                 <section>
-                        <h2>Exercise 2 - turn order</h2>
+                        <h2>Exercise 1 - turn order</h2>
                         <p>Create a variable called turn which contains a value 'circle' indicating that circles go first</p>
                 </section>
 
                 <section>
-                        <h2>Exercise 2 - Solution</h2>
+                        <h2>Exercise 1 - Solution</h2>
                         <pre><code class="hljs javascript">
     var turn = "circle"
                         </code></pre>
@@ -336,12 +336,12 @@
                 </section>
 
                 <section>
-                        <h2>Exercise 3 - Gather the pieces</h2>
+                        <h2>Exercise 2 - Gather the pieces</h2>
                         <p>Create a variable called 'boardPieces' which contains references to all div elements with a board-piece class</p>
                 </section>
 
                 <section>
-                        <h2>Exercise 3 - Solution</h2>
+                        <h2>Exercise 2 - Solution</h2>
                         <pre><code class="hljs javascript">
     var boardPieces = 
         document.getElementsByClassName("board-piece")
@@ -404,12 +404,12 @@
                 </section>
 
                 <section>
-                        <h2>Exercise 4 - On board element click</h2>
+                        <h2>Exercise 3 - On board element click</h2>
                         <p>Create a function onBoardPieceClick that prints 'ouch' to console. Assign that function to all elements with 'board-piece' class</p>
                 </section>
 
                 <section>
-                        <h2>Exercise 4 - Solution</h2>
+                        <h2>Exercise 3 - Solution</h2>
                         <pre><code class="hljs javascript">
     function onBoardPieceClick(event) {
         console.log("ouch")
@@ -422,12 +422,12 @@
                 </section>
 
                 <section>
-                        <h2>Exercise 5 - On board element click</h2>
+                        <h2>Exercise 4 - On board element click</h2>
                         <p>Modify function onBoardPieceClick to add a class to clicked board piece (available in event.target). The class name should be equal to value of variable turn created in Exercise 1.</p>
                 </section>
 
                 <section>
-                        <h2>Exercise 5 - Solution</h2>
+                        <h2>Exercise 4 - Solution</h2>
                         <pre><code class="hljs javascript">
     function onBoardPieceClick(event) {
         var boardPiece = event.target
@@ -471,12 +471,12 @@
                 </section>
 
                 <section>
-                        <h2>Exercise 6 - Alternate turns</h2>
+                        <h2>Exercise 5 - Alternate turns</h2>
                         <p>Extend function onBoardPieceClick to change the value of turn variable. If it's 'circle' it should become 'cross'. If it's 'cross' it should become 'circle'</p>
                 </section>
 
                 <section>
-                        <h2>Exercise 6 - Alternate turns</h2>
+                        <h2>Exercise 5 - Alternate turns</h2>
                         <pre><code class="hljs javascript">
     function onBoardPieceClick(event) {
         var boardPiece = event.target

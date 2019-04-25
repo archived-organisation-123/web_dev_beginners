@@ -142,23 +142,6 @@
 
                 </section>
 
-                <section id="nesting">
-                    <h2>Nesting Elements</h2>
-                    <div>
-                         <pre><code class="hljs html" data-trim>
-&lt;body&gt;
-    &lt;header&gt;
-        &lt;h1&gt;Title&lt;/h1&gt;
-    &lt;/header&gt;
-    &lt;article&gt;
-        &lt;h4&gt;Article Title&lt;/h4&gt;
-    &lt;/article&gt;
-&lt;/body&gt;
-                            </code></pre>
-
-                    </div>
-                </section>
-
 				<section id="css"
                     data-background-image="https://media.giphy.com/media/yYSSBtDgbbRzq/giphy.gif"
                     data-background-repeat="no-repeat"
@@ -236,60 +219,44 @@
                     <p>Tic Tac Toe</p>
                 </section>
 
+                <section id="draw-board">
+                    <h2>Draw the board</h2>
+                    <pre><code class="hljs html">
+        &lt;div class=&quot;board&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;column&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- 3 times --&gt;
+        &lt;/div&gt;
+                    </code></pre>
+                </section>
+
                 <section>
                     <h2>Draw the board</h2>
-                    <p>Html needed</p>
-                    <pre><code class="hljs html">
-            &lt;html&gt;
-            &lt;body&gt;
-                &lt;div class=&quot;board&quot;&gt;
-                    &lt;div class=&quot;board-piece&quot;&gt;&lt;/div&gt;
-                    &lt;div class=&quot;board-piece&quot;&gt;&lt;/div&gt;
-                    &lt;div class=&quot;board-piece&quot;&gt;&lt;/div&gt;
-                    &lt;!-- 3 times --&gt;
-                &lt;/div&gt;
-            &lt;/body&gt;
-            &lt;/html&gt;
-                    </code></pre>
-                </section>
-
-                <section>
-                        <h2>Draw the board</h2>
-                        <p>Board class</p>
                     <pre><code class="hljs css">
-                    .board { 
-                        margin: auto;
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                        width: 300px;
-                        height: 300px;
+                    .row {
+                      clear: left;
+                    }
+
+                    .column { 
+                      float:left;
+                      border: 1px solid black;
+                      width:100px;
+                      display:inline-block;
+                      height:100px;
+                      margin:0;
+                      padding:0;
                     }
                     </code></pre>
                 </section>
 
                 <section>
-                        <h2>Draw the board</h2>
-                        <p>Board piece class</p>
+                        <h2>Draw the pieces</h2>
+                        <p>nought & cross</p>
                     <pre><code class="hljs css">
-                    .board-piece { 
-                        box-sizing: border-box;
-                        border: 1px solid black;
-                        width: 100px;
-                        height: 100px;
-                        
-                        background-repeat: no-repeat;
-                        background-size: 90% 90%;
-                        background-position: center; 
-                    }
-                    </code></pre>
-                </section>
-
-                <section>
-                        <h2>Draw the board</h2>
-                        <p>Cross & Circle</p>
-                    <pre><code class="hljs css">
-    .circle {
+    .nought {
         background-image: url("https://bit.ly/2UB4bmj");
     } 
     .cross { 
@@ -299,39 +266,11 @@
                 </section>
 
 
-                <section>
-                    <h2>Intro to JS</h2>
-                </section>
-
-                <section>
-                    <h2>JS is everywhere</h2>
-                    <ul>
-                        <li>Websites</li>
-                        <li>Mobile Apps</li>
-                        <li>Servers</li>
-                        <li><a href="https://www.youtube.com/watch?v=d1upI3mwfNY">Check this out</a></li>
-                    </ul>
-                </section>
-                
-
-                <section>
-                        <h2>Exercise 1</h2>
-                        <p>Modify HTML to display a cricle and a cross by adding appropriate classes to board-piece elements</p>
-                </section>
-
-                <section id="next-steps">
-                    <h2>Advanced Topics</h2>
-                    <ul>
-                        <li>More CSS</li>
-                        <li>JavaScript</li>
-                        <li>Custom Domain</li>
-                    </ul>
-                </section>
 
                 <section>
                     <h2>Intro to JS</h2>
                     <ul>
-                        <li>First appeared	December 4, 1995; 2pwd3 years ago</li>
+                        <li>First appeared	December 4, 1995; 23 years ago</li>
                         <li>Named JavaScript to appeal to busineses and Java developers</li>
                         <li>Familiar syntax to java, but very different language</li>
                         <li>Fastest growing open source community</li>

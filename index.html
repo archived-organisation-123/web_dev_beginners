@@ -313,13 +313,13 @@
 
                 <section>
                         <h2>Exercise 1 - turn order</h2>
-                        <p>Create a variable called turn which contains a value 'circle' indicating that circles go first</p>
+                        <p>Create a variable called turn which contains a value 'nought' indicating that noughts go first</p>
                 </section>
 
                 <section>
                         <h2>Exercise 1 - Solution</h2>
                         <pre><code class="hljs javascript">
-    var turn = "circle"
+    var turn = "nought"
                         </code></pre>
                 </section>
 
@@ -330,7 +330,7 @@
     console.log(boards.length)
     var board = boards.item(0) // Gets the first items 
     board.classList.add("cross") // Add a css class
-    board.classList.add("circle")
+    board.classList.add("nought")
     board.classList.remove("cross") // Remove a css class
                         </code></pre>
                 </section>
@@ -472,7 +472,7 @@
 
                 <section>
                         <h2>Exercise 5 - Alternate turns</h2>
-                        <p>Extend function onBoardPieceClick to change the value of turn variable. If it's 'circle' it should become 'cross'. If it's 'cross' it should become 'circle'</p>
+                        <p>Extend function onBoardPieceClick to change the value of turn variable. If it's 'nought' it should become 'cross'. If it's 'cross' it should become 'nought'</p>
                 </section>
 
                 <section>
@@ -481,11 +481,11 @@
     function onBoardPieceClick(event) {
         var boardPiece = event.target
         boardPiece.classList.add(turn)
-        if (turn == "circle") {
+        if (turn == "nought") {
             turn = "cross"
         } 
         if (turn == "square") {
-            turn = "circle"
+            turn = "nought"
         }
     }
                         </code></pre>

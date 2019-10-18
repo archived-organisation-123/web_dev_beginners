@@ -366,9 +366,9 @@
                 <section>
                         <h2>Functions - Event handlers</h2>
                         <pre><code class="hljs javascript">
-    var reds = document.getElementByClassName("red-btn")
+    var reds = document.getElementsByClassName("red-btn")
     var red = reds.item(0)
-    var blues = document.getElementByClassName("blue-btn")
+    var blues = document.getElementsByClassName("blue-btn")
     var blue = blues.item(0)
 
     // event is populated with information about the click
@@ -395,7 +395,7 @@
                 <section>
                         <h2>Loops - Iterate over lists</h2>
                         <pre><code class="hljs javascript">
-    var pianoKeys = document.getElementByClassName("piano-key")
+    var pianoKeys = document.getElementsByClassName("piano-key")
 
     for (var i = 0; i < pianoKeys.length; i = i + 1) {
         pianoKeys.item(i).onclick = play
